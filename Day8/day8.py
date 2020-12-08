@@ -78,17 +78,14 @@ def challenge2(file_path):
     program = read_bytecode(data)
     result = -1
     for bytecode in program:
-        if bytecode.instruction == 'jmp':
-            try:
-                result = execute_modified_program(program, bytecode, 'nop')
-                break
-            except LoopException:
-                pass
-        elif bytecode.instruction == 'nop':
-            try:
-                result = execute_modified_program(program, bytecode, 'jmp')
-                break
-            except LoopException:
-                pass
+        if bytecode.instruction == 'acc':
+            continue
+
+        new_instruction = 'nop' if bytecode.instruction == 'jmp' else 'jmp'
+        try:
+            result = execute_modified_program(program, bytecode, new_instruction)
+            break
+        except LoopException:
+            pass
 
     return result
