@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# My session id for getting questions and puzzles
+sessionid.txt
+
+#
+.idea

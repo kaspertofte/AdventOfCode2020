@@ -1,0 +1,20 @@
+import unittest
+from Day<day>.day<day> import *
+
+
+class Day<day>Test(unittest.TestCase):
+    def test_challenge1_on_test_data(self):
+        self.assertEqual(0, challenge1('day<day>.test'))
+
+    def test_challenge1_on_real_data(self):
+        self.assertEqual(0, challenge1('day<day>.input'))
+
+    def test_challenge2_on_test_data(self):
+        self.assertEqual(0, challenge2('day<day>.test'))
+
+    def test_challenge2_on_real_data(self):
+        self.assertEqual(0, challenge2('day<day>.input'))
+
+
+if __name__ == '__main__':
+    unittest.main()
