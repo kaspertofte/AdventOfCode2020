@@ -137,13 +137,6 @@ class SeatLayout:
                 result += 1
         return result
 
-    def count_free(self, seats):
-        result = 0
-        for seat in seats:
-            if self.data[seat] != '#':
-                result += 1
-        return result
-
     def is_floor(self, index):
         return self.data[index] == '.'
 
